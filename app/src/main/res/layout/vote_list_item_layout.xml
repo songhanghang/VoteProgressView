@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/progress"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:background="@android:color/holo_blue_bright">
+    android:layout_height="39.5dp">
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/shape_round_red"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="11dp"
+        android:text="a"
+        />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/label"
+        android:layout_marginLeft="16.5dp"
+        android:textSize="11dp"
+        tools:text="你情我愿的事"
+        />
+
+</RelativeLayout>

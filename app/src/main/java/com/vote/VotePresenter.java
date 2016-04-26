@@ -1,6 +1,7 @@
 package com.vote;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -93,17 +94,17 @@ public class VotePresenter implements View.OnClickListener{
 
     private List<VoteBean> getTestData() {
         List<VoteBean> list = new ArrayList<>();
-        VoteBean voteBean1 = new VoteBean("张学友", 14);
+        VoteBean voteBean1 = new VoteBean("张学友", 14, Color.RED);
         list.add(voteBean1);
-        VoteBean voteBean2 = new VoteBean("刘德华", 10);
+        VoteBean voteBean2 = new VoteBean("刘德华", 10, Color.GRAY);
         list.add(voteBean2);
-        VoteBean voteBean3 = new VoteBean("成龙", 20);
+        VoteBean voteBean3 = new VoteBean("成龙", 20, Color.BLUE);
         list.add(voteBean3);
-        VoteBean voteBean4 = new VoteBean("周润发", 30);
+        VoteBean voteBean4 = new VoteBean("周润发", 30, Color.MAGENTA);
         list.add(voteBean4);
-        VoteBean voteBean5 = new VoteBean("郭富城", 50);
+        VoteBean voteBean5 = new VoteBean("郭富城", 50, Color.GREEN);
         list.add(voteBean5);
-        VoteBean voteBean6 = new VoteBean("周星驰", 60);
+        VoteBean voteBean6 = new VoteBean("周星驰", 60, Color.YELLOW);
         list.add(voteBean6);
         return list;
     }

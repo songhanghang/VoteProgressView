@@ -36,7 +36,11 @@ public class VoteAdapter extends RecyclerView.Adapter<VoteAdapter.VoteViewHolder
 
     @Override
     public void onBindViewHolder(VoteViewHolder holder, int position) {
-
+//        VoteBean voteBean = list.get(position);
+//        holder.progressView.setProgressColor(voteBean.color);
+//        holder.progressView.setProgress(voteBean.progress);
+//        holder.progressView.fireAnim();
+//        holder.titleView.setText(voteBean.title);
     }
 
     @Override
@@ -45,12 +49,15 @@ public class VoteAdapter extends RecyclerView.Adapter<VoteAdapter.VoteViewHolder
     }
 
     public class VoteViewHolder extends RecyclerView.ViewHolder {
-        private TextView titleTextView;
-        private VoteProgressView voteProgressView;
-        private TextView labelTextView;
+//        private VoteProgressView progressView;
+//        private TextView titleView;
+//        private TextView labelView;
 
         public VoteViewHolder(View itemView) {
             super(itemView);
+//            progressView = (VoteProgressView) itemView.findViewById(R.id.progress);
+//            titleView = (TextView) itemView.findViewById(R.id.title);
+//            labelView = (TextView) itemView.findViewById(R.id.label);
         }
     }
 }

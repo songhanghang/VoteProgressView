@@ -5,10 +5,12 @@ package com.vote;
  */
 public class VoteBean {
     public String title;
-    public int rate;
+    public int progress;
+    public int color;
 
-    public VoteBean(String title, int rate) {
+    public VoteBean(String title, int progress, int color) {
         this.title = title;
-        this.rate = rate;
+        this.progress = progress;
+        this.color = color;
     }
 }

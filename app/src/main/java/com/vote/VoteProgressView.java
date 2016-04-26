@@ -133,7 +133,7 @@ public class VoteProgressView extends RelativeLayout {
         this.maxProgress = maxProgress;
     }
 
-    public void setCurProgress(int curProgress) {
+    public void setProgress(int curProgress) {
         this.curProgress = curProgress;
     }
 
