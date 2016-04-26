@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.songhang.voteprogressview.R;
@@ -36,11 +37,17 @@ public class VoteAdapter extends RecyclerView.Adapter<VoteAdapter.VoteViewHolder
 
     @Override
     public void onBindViewHolder(VoteViewHolder holder, int position) {
-//        VoteBean voteBean = list.get(position);
-//        holder.progressView.setProgressColor(voteBean.color);
-//        holder.progressView.setProgress(voteBean.progress);
-//        holder.progressView.fireAnim();
-//        holder.titleView.setText(voteBean.title);
+        VoteBean voteBean = list.get(position);
+        holder.progressView.setProgressColor(voteBean.color);
+        holder.progressView.setProgress(voteBean.progress);
+        holder.progressView.fireAnim();
+        holder.labelView.setText(String.valueOf(position));
+        holder.progressTitleView.setText(voteBean.progress + "%");
+        if (isGrid) { //gird
+            holder.headView.setImageResource(R.mipmap.ic_launcher);
+        } else { //list
+            holder.titleView.setText(voteBean.title);
+        }
     }
 
     @Override
@@ -49,15 +56,19 @@ public class VoteAdapter extends RecyclerView.Adapter<VoteAdapter.VoteViewHolder
     }
 
     public class VoteViewHolder extends RecyclerView.ViewHolder {
-//        private VoteProgressView progressView;
-//        private TextView titleView;
-//        private TextView labelView;
+        private VoteProgressView progressView;
+        private TextView titleView;
+        private TextView labelView;
+        private TextView progressTitleView;
+        private ImageView headView;
 
         public VoteViewHolder(View itemView) {
             super(itemView);
-//            progressView = (VoteProgressView) itemView.findViewById(R.id.progress);
-//            titleView = (TextView) itemView.findViewById(R.id.title);
-//            labelView = (TextView) itemView.findViewById(R.id.label);
+            progressView = (VoteProgressView) itemView.findViewById(R.id.progress);
+            titleView = (TextView) itemView.findViewById(R.id.title);
+            labelView = (TextView) itemView.findViewById(R.id.label);
+            progressTitleView = (TextView) itemView.findViewById(R.id.progress_title);
+            headView = (ImageView) itemView.findViewById(R.id.head);
         }
     }
 }

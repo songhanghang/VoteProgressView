@@ -1,8 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:background="@android:color/holo_red_dark">
+    android:layout_height="66dp"
+    android:padding="2.25dp">
+        <ImageView
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:background="@android:color/darker_gray"
+            android:src="@mipmap/ic_launcher" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/shape_round_red"
+            android:gravity="center"
+            android:text="a"
+            android:textColor="@android:color/white"
+            android:textSize="11dp" />
+
+        <com.vote.VoteProgressView
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/progress_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:textColor="@android:color/white"
+                android:textSize="11dp"
+                tools:text="10%" />
+        </com.vote.VoteProgressView>
+</RelativeLayout>

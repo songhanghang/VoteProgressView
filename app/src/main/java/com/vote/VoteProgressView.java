@@ -18,7 +18,7 @@ import android.widget.RelativeLayout;
  * Created by songhang on 16/4/22.
  */
 public class VoteProgressView extends RelativeLayout {
-    private static final int ANIM_DURATION = 300;
+    private static final int ANIM_DURATION = 1000;
     private static final String TAG = VoteProgressView.class.getSimpleName();
     private int maxProgress = 100; //最大进度
     private int curProgress = 50; //当前进度
