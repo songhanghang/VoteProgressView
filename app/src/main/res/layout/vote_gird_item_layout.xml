@@ -14,10 +14,11 @@
 
         <TextView
             android:id="@+id/label"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:background="@drawable/shape_round_red"
-            android:gravity="center"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:background="@drawable/vote_item_corner_shader"
+            android:gravity="top|left"
+            android:paddingLeft="2dp"
             android:text="a"
             android:textColor="@android:color/white"
             android:textSize="11dp" />
